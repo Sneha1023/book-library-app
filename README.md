@@ -16,7 +16,7 @@ Follow the steps below to get the application up and running locally.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/book-library-app.git
+   git clone https://github.com/Sneha1023/book-library-app.git
    cd book-library-app/backend
    ```
 
