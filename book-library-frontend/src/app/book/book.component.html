@@ -1,0 +1,30 @@
+<div>
+    <h1>Book Library</h1>
+  
+    <form (ngSubmit)="addBook()">
+      <input [(ngModel)]="newBook.title" placeholder="Title" name="title" required />
+      <input [(ngModel)]="newBook.author" placeholder="Author" name="author" required />
+      <input [(ngModel)]="newBook.year" type="number" placeholder="Year" name="year" required />
+      <button type="submit">Add Book</button>
+    </form>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Year</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.year }}</td>
+          <td><button (click)="deleteBook(book._id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
