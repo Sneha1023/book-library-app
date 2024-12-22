@@ -1,0 +1,27 @@
+<p>books-list works!</p>
+<h2>Books List</h2>
+
+<!-- Display message if no books are available -->
+<div *ngIf="books.length === 0">No books available.</div>
+
+<!-- Display books in a table -->
+<table *ngIf="books.length > 0">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Genre</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.genre }}</td>
+      <td>
+        <button (click)="deleteBook(book._id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
